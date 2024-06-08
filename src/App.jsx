@@ -1,18 +1,11 @@
 // import { useState } from 'react'
-import './App.css'
-import AboutMe from './components/AboutMe'
-import Image from './components/ImageContainer'
+import './App.css';
+import Sidebar from './components/Sidebar';
 
 function App() {
-  return (
-    <>
-      <header className='header'>
-        <Image />
-        <AboutMe />
-      </header>
-      <main className='content'></main>
-    </>
-  )
+	return (
+		<Sidebar />
+	);
 }
 
-export default App
+export default App;

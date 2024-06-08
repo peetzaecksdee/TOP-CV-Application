@@ -17,10 +17,35 @@ hr {
 .content,
 .header {
 	display: flex;
-	justify-content: center;
+	justify-content: start;
 	align-items: center;
 	flex-direction: column;
 	gap: 4rem;
+}
+
+.container,
+.content-container {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.container {
+	width: 80%;
+	flex-direction: column;
+	align-items: start;
+	gap: 1rem;
+}
+
+.content-container {
+	gap: 1rem;
+	align-items: center;
+	text-align: start;
+}
+
+.content-container img {
+	width: 1.5rem;
+	height: 1.5rem;
+	filter: invert(100%);
 }
 
 .image-container {
@@ -30,23 +55,11 @@ hr {
 	height: 8rem;
 }
 
-.container {
-	width: 80%;
-	display: flex;
-	flex-direction: column;
-	align-items: start;
-  gap: 0.5rem;
-}
-
 .header {
 	background-color: var(--black);
 	height: 100%;
 	width: 15%;
 	padding: 4rem 0.5rem 4rem 1rem;
-}
-
-.header .nav-title {
-	color: var(--white);
 }
 
 .nav-title {
@@ -55,4 +68,14 @@ hr {
 
 .text {
 	color: var(--white);
+}
+
+/* SIMPLE CLASSES */
+
+.white {
+	color: var(--white);
+}
+
+.small {
+	font-size: .75rem;
 }
