@@ -1,9 +1,9 @@
-import NAN from '../assets/NAN.png'
+import NAI from '../assets/NAN.png'
 
-export default function Image() {
+export default function Image({ img = NAI}) {
 	return (
 		<div className="image-container circle">
-			<img src={NAN} />
+			<img src={img} />
 		</div>
 	);
 }

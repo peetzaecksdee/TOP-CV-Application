@@ -1,13 +1,11 @@
+import Container from "./Container"
+
 export default function AboutMe() {
-  return <>
-    <div className='container'>
-      <span className='nav-title'>
-        ABOUT ME
-      </span>
-      <hr />
+  return (
+    <Container header='about me'>
       <span className='text'>
         yap yap yap
       </span>
-    </div>
-  </>
+    </Container>
+  )
 }
