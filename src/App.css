@@ -48,6 +48,7 @@ hr {
 }
 
 .decor {
+	flex-shrink: 0;
 	position: relative;
 	right: 5%;
 	display: flex;
@@ -60,10 +61,11 @@ hr {
 }
 
 .decor::before {
+	flex-shrink: 0;
 	content: '';
 	position: absolute;
 	background-color: var(--blue);
-	width: 10rem;
+	width: 20vw;
 	height: 8.94rem;
 	right: 50%;
 }
@@ -79,7 +81,7 @@ hr {
 .header {
 	background-color: var(--black);
 	height: 100%;
-	width: 15%;
+	width: max(10rem, 20%);
 	padding: 4rem 0.5rem 4rem 1rem;
 }
 
