@@ -4,12 +4,15 @@ hr {
 	background-color: var(--white);
 }
 
+/* SIDEBAR */
+
 .circle {
 	border-radius: 50%;
 }
 
 .content,
-.header {
+.header,
+.main {
 	display: flex;
 	justify-content: start;
 	align-items: center;
@@ -81,7 +84,7 @@ hr {
 .header {
 	background-color: var(--black);
 	height: 100%;
-	width: max(10rem, 20%);
+	width: var(--header-size);
 	padding: 4rem 0.5rem 4rem 1rem;
 }
 
@@ -96,10 +99,29 @@ hr {
 	object-fit: contain;
 	height: 12rem;
 	width: 12rem;
+	pointer-events: none;
+	-webkit-user-drag: none;
+	user-select: none;
 }
 
-.text {
-	color: var(--white);
+/* END SIDEBAR */
+
+.main {
+	width: max-content;
+	color: var(--black);
+	flex-grow: 1;
+	padding: 4rem 0.5rem 4rem 1rem;
+}
+
+.title {
+	font-size: 6rem;
+	font-weight: bold;
+	text-align: center;
+}
+
+.subtitle {
+	font-size: 1.5rem;
+	letter-spacing: 4px;
 }
 
 /* SIMPLE CLASSES */
@@ -110,4 +132,12 @@ hr {
 
 .small {
 	font-size: 0.75rem;
+}
+
+.blue {
+	color: var(--blue);
+}
+
+.black {
+	color: var(--black);
 }

@@ -6,13 +6,12 @@ import Social from './Social';
 export default function Sidebar() {
 	return (
 		<>
-			<header className="header">
+			<header className="header white">
 				<Image />
 				<AboutMe />
         <Contact />
         <Social />
 			</header>
-			<main className="content"></main>
 		</>
 	);
 }

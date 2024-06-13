@@ -2,11 +2,12 @@
   --white: hsl(0, 0%, 96.5%);
   --black: hsl(0, 0%, 22%);
   --blue: hsl(198, 77%, 53%);
+
+	--header-size: max(10rem, 20%);
 }
 
 #root {
   width: 100vw;
-  text-align: center;
   display: flex;
   font-family: 'Nunito';
   height: 100vh;
