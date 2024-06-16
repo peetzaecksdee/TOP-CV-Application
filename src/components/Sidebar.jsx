@@ -5,9 +5,9 @@ import NAI from '../assets/NAN.png';
 
 function Image({ img = NAI }) {
 	return (
-		<div className="decor">
-			<div className="image-container circle">
-				<img className="profile" src={img} />
+		<div className='decor'>
+			<div className='image-container circle'>
+				<input type='image' className='profile' src={img}/>
 			</div>
 		</div>
 	);
