@@ -1,5 +1,6 @@
 import Experience from './Main/Experience';
 import Education from './Main/Education';
+import Skills from './Main/Skills';
 
 Title.defaultProps = {
 	firstName: 'geeza',
@@ -25,6 +26,7 @@ export default function Main() {
 			<Title firstName='geeza' lastName='mama' />
 			<Experience />
       <Education />
+      <Skills />
 		</main>
 	);
 }

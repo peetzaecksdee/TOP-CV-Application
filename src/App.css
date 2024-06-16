@@ -117,8 +117,9 @@ hr.black {
 /* END SIDEBAR */
 
 .main {
+	width: 100%;
 	color: var(--black);
-	padding: 4rem 0.5rem 4rem 1rem;
+	padding: 4rem;
 }
 
 .title {
@@ -130,6 +131,28 @@ hr.black {
 .subtitle {
 	font-size: 1.5rem;
 	letter-spacing: 4px;
+}
+
+.grid-container {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.bar-container {
+	height: 1rem;
+	width: 50%;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	background-color: hsla(0, 0%, 22%, 0.1);
+	border-radius: 1rem;
+	overflow: hidden;
+}
+
+.bar {
+	background-color: var(--blue);
+	height: 100%;
 }
 
 /* SIMPLE CLASSES */
