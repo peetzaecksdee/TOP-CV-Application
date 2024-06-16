@@ -1,4 +1,4 @@
-import Container from './Container';
+import Container from '../Utils/Container';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faLocation, faWindowMaximize, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 

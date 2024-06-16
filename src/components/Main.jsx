@@ -1,6 +1,23 @@
-import Title from './Title';
-import Experience from './Experience';
-import Education from './Education';
+import Experience from './Main/Experience';
+import Education from './Main/Education';
+
+Title.defaultProps = {
+	firstName: 'geeza',
+	lastName: 'lala',
+	position: 'freelancer',
+};
+
+function Title({ firstName, lastName, position }) {
+	return (
+		<div className='title-container'>
+			<div className='title'>
+				<span>{firstName.toUpperCase()} </span>
+				<span className='blue'>{lastName.toUpperCase()}</span>
+			</div>
+			<span className='subtitle'>{position.toUpperCase()}</span>
+		</div>
+	);
+}
 
 export default function Main() {
 	return (

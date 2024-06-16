@@ -1,7 +1,17 @@
-import AboutMe from './AboutMe';
-import Image from './ImageContainer';
-import Contact from './Contact';
-import Social from './Social';
+import AboutMe from './Sidebar/AboutMe';
+import Contact from './Sidebar/Contact';
+import Social from './Sidebar/Social';
+import NAI from '../assets/NAN.png';
+
+function Image({ img = NAI }) {
+	return (
+		<div className="decor">
+			<div className="image-container circle">
+				<img className="profile" src={img} />
+			</div>
+		</div>
+	);
+}
 
 export default function Sidebar() {
 	return (

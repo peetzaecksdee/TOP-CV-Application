@@ -1,8 +1,8 @@
-import Container from './Container';
-import Facebook from '../assets/facebook.svg';
-import Instagram from '../assets/instagram.svg';
-import Linkedin from '../assets/linkedin.svg';
-import Twitter from '../assets/twitter.svg';
+import Container from '../Utils/Container';
+import Facebook from '../../assets/facebook.svg';
+import Instagram from '../../assets/instagram.svg';
+import Linkedin from '../../assets/linkedin.svg';
+import Twitter from '../../assets/twitter.svg';
 
 export default function Social() {
 	return (

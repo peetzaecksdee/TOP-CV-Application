@@ -1,5 +1,3 @@
-import Container from './Container';
-
 Title.defaultProps = {
 	firstName: 'geeza',
 	lastName: 'lala',

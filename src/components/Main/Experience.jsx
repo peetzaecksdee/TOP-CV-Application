@@ -1,5 +1,5 @@
-import Container from './Container';
-import DateContent from './DateContent';
+import Container from '../Utils/Container';
+import DateContent from '../Utils/DateContent';
 
 let experiences = [
 	{
