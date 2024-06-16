@@ -7,12 +7,14 @@ hr.black {
 	background-color: var(--black);
 }
 
-input {
+input, textarea {
+	width: 100%;
 	background: none;
 	border: none;
+	resize: none;
 }
 
-input:focus {
+input:focus, textarea:focus {
 	outline: none;
 }
 
