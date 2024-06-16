@@ -1,7 +1,10 @@
 hr {
-	height: 2px;
 	width: 100%;
 	background-color: var(--white);
+}
+
+hr.black {
+	background-color: var(--black);	
 }
 
 /* SIDEBAR */
@@ -52,6 +55,7 @@ hr {
 
 .decor {
 	flex-shrink: 0;
+	flex-grow: 0;
 	position: relative;
 	right: 5%;
 	display: flex;
@@ -68,7 +72,7 @@ hr {
 	content: '';
 	position: absolute;
 	background-color: var(--blue);
-	width: 20vw;
+	width: 20rem;
 	height: 8.94rem;
 	right: 50%;
 }
@@ -86,10 +90,16 @@ hr {
 	height: 100%;
 	width: var(--header-size);
 	padding: 4rem 0.5rem 4rem 1rem;
+	flex-shrink: 0;
 }
 
 .nav-title {
 	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.nav-title:not(.blue) {
+	letter-spacing: 0.1rem;
 }
 
 .profile {
@@ -107,9 +117,7 @@ hr {
 /* END SIDEBAR */
 
 .main {
-	width: max-content;
 	color: var(--black);
-	flex-grow: 1;
 	padding: 4rem 0.5rem 4rem 1rem;
 }
 

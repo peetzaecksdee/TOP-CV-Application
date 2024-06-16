@@ -3,7 +3,7 @@
   --black: hsl(0, 0%, 22%);
   --blue: hsl(198, 77%, 53%);
 
-	--header-size: max(10rem, 20%);
+	--header-size: max(20rem, 20%);
 }
 
 #root {
