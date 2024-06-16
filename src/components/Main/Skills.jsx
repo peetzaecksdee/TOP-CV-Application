@@ -27,17 +27,17 @@ let skills = [
 	},
 ];
 
-function PercentageBar({percentage}) {
-  return (
-    <div className='bar-container'>
-      <div
-        className='bar'
-        style={{
-          width: `${percentage}%`,
-        }}
-      />
-    </div>
-  );
+function PercentageBar({ percentage }) {
+	return (
+		<div className='bar-container'>
+			<div
+				className='bar'
+				style={{
+					width: `${percentage}%`,
+				}}
+			/>
+		</div>
+	);
 }
 
 function ExperiencePercentage({ name, percentage }) {
@@ -51,8 +51,7 @@ function ExperiencePercentage({ name, percentage }) {
 
 export default function Experience() {
 	return (
-		<>
-			<Container header='experience' className='black' />
+		<Container header='experience' className='black'>
 			<div className='grid-container'>
 				{skills.map((skill, index) => {
 					return (
@@ -64,6 +63,6 @@ export default function Experience() {
 					);
 				})}
 			</div>
-		</>
+		</Container>
 	);
 }

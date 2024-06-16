@@ -36,7 +36,7 @@ hr.black {
 	gap: 1rem;
 }
 
-.container div {
+.container div:not(.bar-container) {
 	width: 100%;
 	text-align: start;
 }
@@ -140,14 +140,15 @@ hr.black {
 }
 
 .bar-container {
-	height: 1rem;
-	width: 50%;
+	height: .5rem;
+	width: 8rem;
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;
 	background-color: hsla(0, 0%, 22%, 0.1);
 	border-radius: 1rem;
 	overflow: hidden;
+	border: 1px var(--black) solid;
 }
 
 .bar {
