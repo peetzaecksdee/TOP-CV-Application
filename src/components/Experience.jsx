@@ -1,4 +1,5 @@
 import Container from './Container';
+import DateContent from './DateContent';
 
 let experiences = [
 	{
@@ -24,26 +25,11 @@ let experiences = [
 	},
 	{
 		yearStart: 2020,
-		yearEnd: 2024,
 		title: 'Manager',
 		content:
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 	},
 ];
-
-function DateContent({ yearStart, yearEnd, title, content }) {
-	return (
-		<>
-			<div className='content-container'>
-				<span className='nav-title blue'>{title.toUpperCase()}</span>
-				<span>
-					{yearStart} - {yearEnd}
-				</span>
-			</div>
-			<span>{content}</span>
-		</>
-	);
-}
 
 export default function Experience() {
 	return (
