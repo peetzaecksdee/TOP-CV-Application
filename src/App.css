@@ -4,7 +4,7 @@ hr {
 }
 
 hr.black {
-	background-color: var(--black);	
+	background-color: var(--black);
 }
 
 input {
@@ -14,6 +14,11 @@ input {
 
 input:focus {
 	outline: none;
+}
+
+input[type='file'] {
+	position: absolute;
+	visibility: hidden;
 }
 
 /* SIDEBAR */
@@ -86,6 +91,12 @@ input:focus {
 	right: 50%;
 }
 
+#fileLabel {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
 .image-container {
 	border: solid 2px black;
 	overflow: hidden;
@@ -114,7 +125,7 @@ input:focus {
 .profile {
 	position: relative;
 	margin-left: 50%;
-	transform: translateX(-50%) translateY(-25%);
+	transform: translateX(-50%) translateY(-15%);
 	object-fit: contain;
 	height: 12rem;
 	width: 12rem;
@@ -149,7 +160,7 @@ input:focus {
 }
 
 .bar-container {
-	height: .5rem;
+	height: 0.5rem;
 	width: 8rem;
 	display: flex;
 	align-items: center;
