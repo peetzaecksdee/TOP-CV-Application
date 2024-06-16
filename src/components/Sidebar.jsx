@@ -5,13 +5,11 @@ import Social from './Social';
 
 export default function Sidebar() {
 	return (
-		<>
-			<header className="header white">
-				<Image />
-				<AboutMe />
-        <Contact />
-        <Social />
-			</header>
-		</>
+		<header className='header white'>
+			<Image />
+			<AboutMe />
+			<Contact />
+			<Social />
+		</header>
 	);
 }
