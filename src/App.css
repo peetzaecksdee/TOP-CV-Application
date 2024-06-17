@@ -13,26 +13,23 @@ textarea {
 	background: none;
 	border: none;
 	resize: none;
-	border-radius: 8px;
-}
-
-input {
-	height: 1.5rem;
 }
 
 input:focus,
 textarea:focus {
+	border-radius: 8px;
 	outline: none;
+	padding: 4px;
+}
+
+textarea:focus,
+input:focus {
+	background-color: var(--white-focus);
 }
 
 textarea.white:focus,
 input.white:focus {
 	background-color: var(--black-focus);
-}
-
-textarea.black:focus,
-input.black:focus {
-	background-color: var(--white-focus);
 }
 
 input[type='file'] {
