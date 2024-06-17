@@ -11,13 +11,18 @@ Title.defaultProps = {
 
 function Title({ firstName, lastName, position }) {
 	const [pos, setPos] = useState(position);
+
+	function handleSubtitle(e) {
+		setPos(e.target.value);
+	}
+
 	return (
 		<div className='title-container'>
 			<div className='title'>
 				<span>{firstName.toUpperCase()} </span>
 				<span className='blue'>{lastName.toUpperCase()}</span>
 			</div>
-			<input className='subtitle' value={pos.toUpperCase()} />
+			<input className='subtitle' onChange={handleSubtitle} value={pos.toUpperCase()} />
 		</div>
 	);
 }
