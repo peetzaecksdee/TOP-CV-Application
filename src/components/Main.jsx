@@ -10,19 +10,43 @@ Title.defaultProps = {
 };
 
 function Title({ firstName, lastName, position }) {
+	const [fullName, setFullName] = useState(firstName + ' ' + lastName);
 	const [pos, setPos] = useState(position);
+	let splitName = fullName.split(' ');
+	if (splitName.length > 2) {
+		setFullName(splitName[0] + ' ' + splitName[1]);
+	}
+	const fN = splitName[0];
+	const lN = splitName[1] || '';
 
 	function handleSubtitle(e) {
 		setPos(e.target.value);
 	}
 
+	function handleName(e) {
+		setFullName(e.target.value.replace(/\s{2,}$/g, ' ').replace(/(^\s+|\s{2,})/g, ''));
+	}
+
+	function focusInput() {
+		document.querySelector('.title-input').focus();
+	}
+
 	return (
 		<div className='title-container'>
-			<div className='title'>
-				<span>{firstName.toUpperCase()} </span>
-				<span className='blue'>{lastName.toUpperCase()}</span>
+			<input
+				className='title-input'
+				value={fullName}
+				onChange={handleName}
+			/>
+			<div className='title' onClick={focusInput}>
+				<span>{fN.toUpperCase()} </span>
+				<span className='blue'>{lN.toUpperCase()}</span>
 			</div>
-			<input className='subtitle' onChange={handleSubtitle} value={pos.toUpperCase()} />
+			<input
+				className='subtitle'
+				onChange={handleSubtitle}
+				value={pos.toUpperCase()}
+			/>
 		</div>
 	);
 }
@@ -32,8 +56,8 @@ export default function Main() {
 		<main className='main black'>
 			<Title />
 			<Experience />
-      <Education />
-      <Skills />
+			<Education />
+			<Skills />
 		</main>
 	);
 }

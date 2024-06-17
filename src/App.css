@@ -16,19 +16,21 @@ textarea {
 }
 
 input:focus,
-textarea:focus {
+textarea:focus,
+.title-container:has(.title-input:focus) {
 	border-radius: 8px;
 	outline: none;
 	padding: 4px;
 }
 
 textarea:focus,
-input:focus {
+input:focus,
+.title-container:has(.title-input:focus) > .title {
 	background-color: var(--white-focus);
 }
 
 textarea.white:focus,
-input.white:focus {
+input.white:focus {	
 	background-color: var(--black-focus);
 }
 
@@ -158,10 +160,18 @@ input[type='file'] {
 	padding: 4rem;
 }
 
+.title-input,
 .title {
 	font-size: 6rem;
 	font-weight: bold;
 	text-align: center;
+}
+
+.title-input {
+	position: absolute;
+	width: 0px;
+	text-align: start;
+	opacity: 0;
 }
 
 .subtitle {
