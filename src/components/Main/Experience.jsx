@@ -37,9 +37,9 @@ let experiences = [
 function sortFormula(experience1, experience2) {
 	return (
 		experience1.yearStart +
-		Math.abs(experience1.yearEnd - experience1.yearStart) -
-		experience2.yearStart +
-		Math.abs(experience2.yearEnd - experience2.yearStart)
+		experience1.yearEnd -
+		experience1.yearStart -
+		(experience2.yearStart + experience2.yearEnd - experience2.yearStart)
 	);
 }
 
@@ -66,6 +66,24 @@ export default function Experience() {
 		]);
 	}
 
+	function handleChange(e, idx) {
+		setExperienceList(
+			experienceList
+				.map((experience, index) => {
+					if (index === idx) {
+						return {
+							...experience,
+							[e.target.name]: e.target.value,
+						};
+					}
+					return experience;
+				})
+				.sort((experience1, experience2) => {
+					return sortFormula(experience1, experience2);
+				})
+		);
+	}
+
 	return (
 		<Container header='experience' addBtn={handleAdd} className='black'>
 			<ul>
@@ -78,6 +96,7 @@ export default function Experience() {
 								title={experience.title}
 								content={experience.content}
 								onDelete={() => handleDelete(index)}
+								onChange={(e) => handleChange(e, index)}
 							/>
 						</li>
 					);
