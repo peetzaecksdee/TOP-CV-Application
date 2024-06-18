@@ -8,7 +8,7 @@ export default function Container({
 		<div className='container'>
 			<div>
 				<span className='nav-title'>{header.toUpperCase()}</span>
-				{addBtn && <button className='add-button'>+</button>}
+				{addBtn && <button className='add-button' onClick={addBtn}>+</button>}
 				<hr className={className} />
 			</div>
 			{children}

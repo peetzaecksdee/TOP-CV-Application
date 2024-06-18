@@ -4,7 +4,7 @@ export default function DateContent({ yearStart, yearEnd, title, content, onDele
 			<div className='content-container'>
 				<span className='nav-title blue'>{title.toUpperCase()}</span>
 				<span>
-					{yearStart} - {yearEnd ? yearEnd : 'present'}
+					{yearStart} - {yearEnd}
 				</span>
 				{<button className='delete' onClick={onDelete}>X</button>}
 			</div>

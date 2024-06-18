@@ -13,6 +13,7 @@ let experiences = [
 	},
 	{
 		yearStart: 2020,
+		yearEnd: new Date().getFullYear(),
 		title: 'Manager',
 		content:
 			'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -36,13 +37,9 @@ let experiences = [
 function sortFormula(experience1, experience2) {
 	return (
 		experience1.yearStart +
-		(experience1.yearEnd
-			? Math.abs(experience1.yearEnd - experience1.yearStart)
-			: 9999) -
+		Math.abs(experience1.yearEnd - experience1.yearStart) -
 		experience2.yearStart +
-		(experience2.yearEnd
-			? Math.abs(experience2.yearEnd - experience2.yearStart)
-			: 9999)
+		Math.abs(experience2.yearEnd - experience2.yearStart)
 	);
 }
 
@@ -57,8 +54,21 @@ export default function Experience() {
 		setExperienceList(experienceList.filter((_, idx) => idx !== index));
 	}
 
+	function handleAdd() {
+		setExperienceList([
+			...experienceList,
+			{
+				yearStart: 2000,
+				yearEnd: 2000,
+				title: 'none',
+				content:
+					'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+			},
+		]);
+	}
+
 	return (
-		<Container header='experience' addBtn={true} className='black'>
+		<Container header='experience' addBtn={handleAdd} className='black'>
 			<ul>
 				{experienceList.map((experience, index) => {
 					return (
