@@ -1,3 +1,11 @@
+button {
+	background: none;
+	background-color: var(--white);
+	padding: 0 .2rem;
+	border-radius: 50%;
+	border: none;
+}
+
 hr {
 	width: 100%;
 	background-color: var(--white);
@@ -23,12 +31,14 @@ textarea:focus,
 	padding: 4px;
 }
 
+button:active,
 textarea:focus,
 input:focus,
 .title-container:has(.title-input:focus) > .title {
 	background-color: var(--white-focus);
 }
 
+button.white:active,
 textarea.white:focus,
 input.white:focus {	
 	background-color: var(--black-focus);
@@ -153,6 +163,15 @@ input[type='file'] {
 }
 
 /* END SIDEBAR */
+
+.content-container:hover > .delete {
+	visibility: visible;
+}
+
+.delete {
+	color: red;
+	visibility: hidden;
+}
 
 .main {
 	width: 100%;
