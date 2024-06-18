@@ -48,7 +48,6 @@ export default function Experience() {
 	experienceList = experienceList.sort((experience1, experience2) => {
 		return sortFormula(experience1, experience2);
 	});
-	console.log(experienceList);
 
 	function handleDelete(index) {
 		setExperienceList(experienceList.filter((_, idx) => idx !== index));
