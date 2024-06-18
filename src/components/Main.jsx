@@ -1,15 +1,8 @@
 import Experience from './Main/Experience';
 import Education from './Main/Education';
-import Skills from './Main/Skills';
 import { useState } from 'react';
 
-Title.defaultProps = {
-	firstName: 'geeza',
-	lastName: 'mama',
-	position: 'freelancer',
-};
-
-function Title({ firstName, lastName, position }) {
+function Title({ firstName = 'geeza', lastName = 'mama', position = 'freelancer' }) {
 	const [fullName, setFullName] = useState(firstName + ' ' + lastName);
 	const [pos, setPos] = useState(position);
 	let splitName = fullName.split(' ');
@@ -57,7 +50,6 @@ export default function Main() {
 			<Title />
 			<Experience />
 			<Education />
-			<Skills />
 		</main>
 	);
 }
