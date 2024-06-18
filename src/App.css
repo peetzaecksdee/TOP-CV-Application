@@ -164,6 +164,18 @@ input[type='file'] {
 
 /* END SIDEBAR */
 
+.add-button {
+	color: green;
+	position: relative;
+	left: .5rem;
+	visibility: hidden;
+	font-size: 1.5rem;
+}
+
+.container:hover .add-button {
+	visibility: visible;
+}
+
 .content-container:hover > .delete {
 	visibility: visible;
 }
