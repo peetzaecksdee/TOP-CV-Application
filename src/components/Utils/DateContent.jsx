@@ -1,4 +1,4 @@
-export default function DateContent({ yearStart, yearEnd, title, content }) {
+export default function DateContent({ yearStart, yearEnd, title, content, onDelete }) {
 	return (
 		<>
 			<div className='content-container'>
@@ -6,7 +6,7 @@ export default function DateContent({ yearStart, yearEnd, title, content }) {
 				<span>
 					{yearStart} - {yearEnd ? yearEnd : 'present'}
 				</span>
-				<button className='delete'>X</button>
+				<button className='delete' onClick={onDelete}>X</button>
 			</div>
 			<span>{content}</span>
 		</>
